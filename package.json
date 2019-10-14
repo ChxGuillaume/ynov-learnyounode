@@ -1,0 +1,16 @@
+{
+  "name": "td1-ynov",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "bl": "^4.0.0",
+    "http": "^0.0.0",
+    "learnyounode": "^4.1.0",
+    "net": "^1.0.2",
+    "through2-map": "^3.0.0"
+  }
+}
