@@ -4,14 +4,8 @@ const bl = require('bl');
 http.get(process.argv[2], res => {
     res.setEncoding('utf8');
 
-    let data = '';
-    res.on('data', (chunk) => data += chunk);
-
     res.pipe(bl(function (err, data) {
         console.log(data.length);
+        console.log(data.toString());
     }));
-
-    res.on('end', () => {
-        console.log(data);
-    });
 });
