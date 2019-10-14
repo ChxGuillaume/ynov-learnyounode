@@ -1,14 +1,12 @@
 const net = require('net');
 const [node, path, port] = process.argv;
 
-const server = net.createServer(socket => {
+net.createServer(socket => {
     socket.setEncoding('utf8');
 
     socket.write(getFormattedDate());
     socket.end();
-});
-
-server.listen(port);
+}).listen(port);
 
 function getFormattedDate() {
     const date = new Date();
